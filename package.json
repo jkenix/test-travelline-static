@@ -1,0 +1,39 @@
+{
+  "name": "jkenix-test-travelline",
+  "type": "module",
+  "version": "1.0.0",
+  "author": "jkenix",
+  "devDependencies": {
+    "browserslist": "^4.24.4",
+    "browserslist-to-esbuild": "^2.1.1",
+    "cross-env": "^7.0.3",
+    "minimatch": "^10.0.1",
+    "mkdirp": "^3.0.1",
+    "node-notifier": "^10.0.1",
+    "postcss": "^8.5.3",
+    "postcss-preset-env": "^10.1.5",
+    "sass": "^1.85.1",
+    "sass-embedded": "^1.85.1",
+    "sharp": "^0.33.5",
+    "svgo": "^3.3.2",
+    "vite": "^6.2.0",
+    "vite-plugin-handlebars": "^2.0.0",
+    "vite-plugin-image-optimizer": "^1.1.8",
+    "vite-plugin-minify": "^2.1.0",
+    "vite-plugin-webpackchunkname": "^1.0.3"
+  },
+  "imports": {
+    "#img": "./src/img/*",
+    "#css": "./src/styles/*",
+    "#js": "./src/js/*",
+    "#*": "./src/*"
+  },
+  "scripts": {
+    "scss": "sudo sass --watch --sourcemap=none --style=compressed sources/scss/styles.scss:sources/css/styles.css",
+    "dev": "vite --config dev.config.js",
+    "prod": "vite build --config prod.config.js",
+    "prev": "vite preview --open",
+    "mk": "mkdir dist",
+    "clean": "rd /s /q dist"
+  }
+}

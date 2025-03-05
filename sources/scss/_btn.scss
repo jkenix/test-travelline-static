@@ -1,0 +1,26 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.btn {
+  @include row;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  border: none;
+
+  position: relative;
+
+  overflow: auto;
+  word-break: break-all;
+
+  padding: 5px;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid white;
+  }
+}
